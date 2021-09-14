@@ -36,7 +36,7 @@ int main(){
 	for (int i = 2; i < N; i++){
 		while (start_idx < i){
 			d = point[i].first - point[start_idx].first;
-			if (d * d <= ans){break;}
+			if (d * d <= ans){break;} // 지금의 점과 set 내의 점들의 거리가 현재 최단거리보다 짧으면 최단거리를 갱신해야 함
 			else {
 				s.erase({point[start_idx].second, point[start_idx].first});
 				start_idx++;
