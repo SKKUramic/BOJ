@@ -57,7 +57,10 @@ char Nucleic(char an, char an_1){
 int main(){
 	int DNA_len;
 	scanf("%d %s", &DNA_len, DNA);
-	if (DNA_len == 1){printf("%c", DNA[0]);}
+	if (DNA_len == 1){
+		printf("%c", DNA[0]);
+		return 0;
+	}
 	for (int i = DNA_len - 1; i > 0; i--){
 		DNA[i - 1] = Nucleic(DNA[i], DNA[i - 1]);
 	}
